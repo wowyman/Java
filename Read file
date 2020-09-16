@@ -1,0 +1,21 @@
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+import java.io.File;
+
+public class Java1 {
+    public static void main(String[] args) throws FileNotFoundException {
+        File file = new File("C:\\Users\\pc\\IdeaProjects\\Java1\\8k.txt");
+        Scanner sc = new Scanner(file);
+        int[] a = new int[8000];
+        int i=0;
+        while(sc.hasNextLine())
+        {
+            String b = sc.nextLine();
+            b = b.replaceAll(" ","");
+            a[i] = Integer.parseInt(b);
+            System.out.println(a[i]+" "+i);
+            i++;
+
+        }
+    }
+}
